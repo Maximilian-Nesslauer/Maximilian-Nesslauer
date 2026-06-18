@@ -35,5 +35,8 @@ jobs:
           # Skip course repos whose generated output (e.g. knitr HTML) skews the stats.
           plugin_languages_skipped: exeRcise-sheet-6
 
-          plugin_achievements: yes
+          # Disabled: the v3.34 achievements query still requests Projects
+          # (classic), which GitHub sunset, so it fails with "Unexpected error".
+          # Re-enable once upstream PR #1769 (Projects V2 migration) ships.
+          plugin_achievements: no
           plugin_achievements_threshold: C
